@@ -1,5 +1,5 @@
 
-const {http} = require('../plugins/http-client.plugin');
+const {http, httpAxios} = require('../plugins/http-client.plugin');
 
 const getPokemonById = (id) => {
 
@@ -37,7 +37,12 @@ const getPokemonByIdAsync = async (id) => {
     //  const pokemon = await response.json();
     //  return pokemon;
 
-    const pokemon = await http.get(url);  
+    //const pokemon = await http.get(url);  
+    const pokemon = await httpAxios.get(url);  
+
+
+
+    //
 
     return pokemon;
     

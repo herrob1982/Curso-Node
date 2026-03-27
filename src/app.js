@@ -48,11 +48,17 @@
 
 
 
-const {getPokemonById, getPokemonByIdCadena} = require('./js-foundation/06-promises');
+const {getPokemonById, getPokemonByIdCadena, getPokemonByIdAsync} = require('./js-foundation/06-promises');
 
 //getPokemonById(2);
 
- getPokemonByIdCadena(22)
- .then((pokemon) => console.log(pokemon.abilities))
- .catch(error => console.log('Por favor intente de nuevo'))
- .finally(() => console.log('Proceso finalizado'));
+//  getPokemonByIdCadena(22)
+//  .then((pokemon) => console.log(pokemon.abilities))
+//  .catch(error => console.log('Por favor intente de nuevo'))
+//  .finally(() => console.log('Proceso finalizado'));
+
+getPokemonByIdAsync(22)
+.then((pokemon) => console.log(pokemon.abilities))
+.catch(error => console.log(error))
+.finally(() => console.log('Proceso finalizado'));
+

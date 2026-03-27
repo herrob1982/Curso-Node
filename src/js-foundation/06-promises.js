@@ -26,11 +26,21 @@ const getPokemonByIdCadena = (id) => {
         .then(pokemon => pokemon)
 }
 
+const getPokemonByIdAsync = async (id) => {
+
+     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+     const response = await fetch(url);
+
+     const pokemon = await response.json();
+     return pokemon;
+}
+
 
 module.exports = 
 {
     getPokemonById,
-    getPokemonByIdCadena
+    getPokemonByIdCadena,
+    getPokemonByIdAsync
 }
  
 

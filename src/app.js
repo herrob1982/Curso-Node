@@ -49,6 +49,7 @@
 
 
 const {getPokemonById, getPokemonByIdCadena, getPokemonByIdAsync} = require('./js-foundation/06-promises');
+const { buildLogger } = require('./plugins');
 
 //getPokemonById(2);
 
@@ -57,8 +58,12 @@ const {getPokemonById, getPokemonByIdCadena, getPokemonByIdAsync} = require('./j
 //  .catch(error => console.log('Por favor intente de nuevo'))
 //  .finally(() => console.log('Proceso finalizado'));
 
-getPokemonByIdAsync(1000)
-.then((pokemon) => console.log(pokemon.abilities))
-.catch(error => console.log(error.message))
-.finally(() => console.log('Proceso finalizado'));
+
+
+const logger = buildLogger('aaplication11');
+logger.log('Iniciando aplicación');
+
+
+
+
 

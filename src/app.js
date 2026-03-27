@@ -57,8 +57,8 @@ const {getPokemonById, getPokemonByIdCadena, getPokemonByIdAsync} = require('./j
 //  .catch(error => console.log('Por favor intente de nuevo'))
 //  .finally(() => console.log('Proceso finalizado'));
 
-getPokemonByIdAsync(22)
-.then((pokemon) => console.log(pokemon.abilities))
+getPokemonByIdAsync(2)
+.then((pokemon) => console.log(pokemon))
 .catch(error => console.log(error))
 .finally(() => console.log('Proceso finalizado'));
 

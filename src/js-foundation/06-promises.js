@@ -1,4 +1,5 @@
 
+const {http} = require('../plugins/http-client.plugin');
 
 const getPokemonById = (id) => {
 
@@ -26,13 +27,23 @@ const getPokemonByIdCadena = (id) => {
         .then(pokemon => pokemon)
 }
 
+
+
 const getPokemonByIdAsync = async (id) => {
 
      const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-     const response = await fetch(url);
 
-     const pokemon = await response.json();
-     return pokemon;
+    //  const response = await fetch(url);
+    //  const pokemon = await response.json();
+    //  return pokemon;
+
+    const pokemon = await http.get(url);  
+
+    return pokemon;
+    
+
+
+
 }
 
 

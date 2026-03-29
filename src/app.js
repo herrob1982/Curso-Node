@@ -60,8 +60,9 @@ const { buildLogger } = require('./plugins');
 
 
 
-const logger = buildLogger('aaplication11');
+const logger = buildLogger('apps1.js');
 logger.log('Iniciando aplicación');
+logger.error('acascasc');
 
 
 
